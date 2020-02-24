@@ -1,0 +1,5 @@
+sdv/
+projects/*
+
+!projects/sdv.vcxproj
+!projects/sdv.vcxproj.filters
