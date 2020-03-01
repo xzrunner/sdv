@@ -3,8 +3,9 @@
 #include <ee0/typedef.h>
 #include <blueprint/typedef.h>
 
-#include <sd/Evaluator.h>
+#include <dag/Graph.h>
 #include <sd/typedef.h>
+#include <sd/NodeVarType.h>
 #include <node0/typedef.h>
 
 #include <boost/noncopyable.hpp>
@@ -45,7 +46,7 @@ private:
     void Update();
 
 private:
-    sd::Evaluator m_eval;
+    dag::Graph<sd::NodeVarType> m_eval;
 
     std::unordered_map<const bp::Node*, sd::NodePtr> m_front2back;
     std::unordered_map<const sd::Node*, n0::SceneNodePtr> m_back2node;
