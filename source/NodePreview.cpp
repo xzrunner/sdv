@@ -1,9 +1,9 @@
-#include "sdv/NodePreview.h"
-#include "sdv/Node.h"
-#include "sdv/Evaluator.h"
-#include "sdv/RegistNodes.h"
-#include "sdv/PinType.h"
-#include "sdv/Blackboard.h"
+#include "texlab/NodePreview.h"
+#include "texlab/Node.h"
+#include "texlab/Evaluator.h"
+#include "texlab/RegistNodes.h"
+#include "texlab/PinType.h"
+#include "texlab/Blackboard.h"
 
 #include <ee3/WorldTravelOP.h>
 #include <blueprint/NodeHelper.h>
@@ -27,11 +27,11 @@
 #include <node3/RenderSystem.h>
 #include <renderpipeline/RenderMgr.h>
 #include <renderpipeline/IRenderer.h>
-#include <sd/Node.h>
-#include <sd/Image.h>
+#include <texgraph/Node.h>
+#include <texgraph/Image.h>
 #include <tessellation/Painter.h>
 
-namespace sdv
+namespace texlab
 {
 
 NodePreview::NodePreview()

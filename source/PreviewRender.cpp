@@ -1,11 +1,11 @@
-#include "sdv/PreviewRender.h"
-#include "sdv/Evaluator.h"
+#include "texlab/PreviewRender.h"
+#include "texlab/Evaluator.h"
 
 #include <painting3/RenderSystem.h>
 #include <node0/SceneNode.h>
 #include <node3/RenderSystem.h>
 
-namespace sdv
+namespace texlab
 {
 
 PreviewRender::PreviewRender(const pt3::Viewport& vp,

@@ -6,7 +6,7 @@
 
 #include <memory>
 
-namespace sdv
+namespace texlab
 {
 
 class Evaluator;

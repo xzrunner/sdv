@@ -1,10 +1,10 @@
-#include "sdv/PreviewPage.h"
+#include "texlab/PreviewPage.h"
 
 #include <ee0/WxStagePage.h>
 #include <ee3/WxStageCanvas.h>
 #include <ee3/CameraDriveOP.h>
 
-namespace sdv
+namespace texlab
 {
 
 PreviewPage::PreviewPage(ee0::WxStagePage& stage_page)

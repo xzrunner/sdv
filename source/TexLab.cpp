@@ -1,22 +1,22 @@
-#include "sdv/SDV.h"
-#include "sdv/PinCallback.h"
-#include "sdv/Node.h"
+#include "texlab/TexLab.h"
+#include "texlab/PinCallback.h"
+#include "texlab/Node.h"
 
 #include <blueprint/NodeBuilder.h>
 #include <blueprint/node/Commentary.h>
 
-#include <sd/SD.h>
+#include <texgraph/TexGraph.h>
 
-namespace sdv
+namespace texlab
 {
 
-CU_SINGLETON_DEFINITION(SDV);
+CU_SINGLETON_DEFINITION(TexLab);
 
 extern void regist_rttr();
 
-SDV::SDV()
+TexLab::TexLab()
 {
-	sd::SD::Instance();
+	texgraph::TexGraph::Instance();
 
 	regist_rttr();
 
@@ -25,7 +25,7 @@ SDV::SDV()
     InitPinCallback();
 }
 
-void SDV::InitNodes()
+void TexLab::InitNodes()
 {
     const int bp_count = 1;
 

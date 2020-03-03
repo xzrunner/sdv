@@ -1,5 +1,5 @@
-#include "sdv/PinCallback.h"
-#include "sdv/PinType.h"
+#include "texlab/PinCallback.h"
+#include "texlab/PinType.h"
 
 #include <painting0/Color.h>
 #include <blueprint/Pin.h>
@@ -20,7 +20,7 @@ std::string get_desc_func(const std::string& name, int type)
     std::string ret = name;
     switch (type)
     {
-    case sdv::PIN_IMAGE:
+    case texlab::PIN_IMAGE:
         ret += "(I)";
         break;
 
@@ -34,7 +34,7 @@ const pt0::Color& get_color_func(int type)
 {
     switch (type)
     {
-    case sdv::PIN_IMAGE:
+    case texlab::PIN_IMAGE:
         return COL_IMAGE;
 
     default:
@@ -57,7 +57,7 @@ bool can_type_cast_func(int type_from, int type_to)
 
 }
 
-namespace sdv
+namespace texlab
 {
 
 void InitPinCallback()

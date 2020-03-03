@@ -1,5 +1,5 @@
-sdv/
+texlab/
 projects/*
 
-!projects/sdv.vcxproj
-!projects/sdv.vcxproj.filters
+!projects/texlab.vcxproj
+!projects/texlab.vcxproj.filters

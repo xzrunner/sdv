@@ -1,6 +1,6 @@
-#include "sdv/WxGraphPage.h"
-#include "sdv/Evaluator.h"
-#include "sdv/Blackboard.h"
+#include "texlab/WxGraphPage.h"
+#include "texlab/Evaluator.h"
+#include "texlab/Blackboard.h"
 
 #include <ee0/SubjectMgr.h>
 #include <blueprint/MessageID.h>
@@ -29,7 +29,7 @@ const uint32_t MESSAGES[] =
 
 }
 
-namespace sdv
+namespace texlab
 {
 
 WxGraphPage::WxGraphPage(wxWindow* parent, const ee0::GameObj& root,

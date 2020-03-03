@@ -1,23 +1,23 @@
-#include "sdv/SdAdapter.h"
-#include "sdv/RegistNodes.h"
-#include "sdv/PinType.h"
-#include "sdv/Node.h"
+#include "texlab/SdAdapter.h"
+#include "texlab/RegistNodes.h"
+#include "texlab/PinType.h"
+#include "texlab/Node.h"
 
 #include <blueprint/Node.h>
 #include <blueprint/Pin.h>
 
-#include <sd/Node.h>
+#include <texgraph/Node.h>
 
-namespace sdv
+namespace texlab
 {
 
-void SdAdapter::UpdatePropBackFromFront(const bp::Node& front, sd::Node& back,
+void SdAdapter::UpdatePropBackFromFront(const bp::Node& front, texgraph::Node& back,
                                         const Evaluator& eval)
 {
     auto f_type = front.get_type();
     auto b_type = back.get_type();
     if (f_type.is_derived_from<Node>() &&
-        b_type.is_derived_from<sd::Node>())
+        b_type.is_derived_from<texgraph::Node>())
     {
         for (auto& dst_prop : b_type.get_properties())
         {
@@ -28,18 +28,18 @@ void SdAdapter::UpdatePropBackFromFront(const bp::Node& front, sd::Node& back,
     }
 }
 
-sd::NodePtr SdAdapter::CreateBackFromFront(const bp::Node& node)
+texgraph::NodePtr SdAdapter::CreateBackFromFront(const bp::Node& node)
 {
     auto type = node.get_type();
     auto src_type = type.get_name().to_string();
     std::string dst_type;
-    std::string lib_str = "sd";
-    auto find_lib = src_type.find("sdv::");
+    std::string lib_str = "texgraph";
+    auto find_lib = src_type.find("texlab::");
     if (find_lib != std::string::npos) {
-        dst_type = lib_str + "::" + src_type.substr(find_lib + strlen("sdv::"));
+        dst_type = lib_str + "::" + src_type.substr(find_lib + strlen("texlab::"));
     }
 
-    sd::NodePtr dst = nullptr;
+    texgraph::NodePtr dst = nullptr;
 
     if (!dst_type.empty())
     {
@@ -54,7 +54,7 @@ sd::NodePtr SdAdapter::CreateBackFromFront(const bp::Node& node)
             rttr::variant var = t.create();
             assert(var.is_valid());
 
-            dst = var.get_value<std::shared_ptr<sd::Node>>();
+            dst = var.get_value<std::shared_ptr<texgraph::Node>>();
             assert(dst);
         }
     }
@@ -67,13 +67,13 @@ sd::NodePtr SdAdapter::CreateBackFromFront(const bp::Node& node)
 }
 
 
-int SdAdapter::TypeBackToFront(sd::NodeVarType type)
+int SdAdapter::TypeBackToFront(texgraph::NodeVarType type)
 {
     int ret = -1;
 
     switch (type)
     {
-    case sd::NodeVarType::Image:
+    case texgraph::NodeVarType::Image:
         ret = PIN_IMAGE;
         break;
 

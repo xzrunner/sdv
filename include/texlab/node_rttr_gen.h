@@ -10,16 +10,16 @@
 #endif
 
 #ifndef PARM_FILEPATH
-#define PARM_FILEPATH sd/node/##PARM_NODE_CLASS##.parm.h
+#define PARM_FILEPATH texgraph/node/##PARM_NODE_CLASS##.parm.h
 #endif
 
-#define RTTR_NAME sdv::##PARM_NODE_NAME
+#define RTTR_NAME texlab::##PARM_NODE_NAME
 
-rttr::registration::class_<sdv::node::PARM_NODE_CLASS>(XSTR(RTTR_NAME))
+rttr::registration::class_<texlab::node::PARM_NODE_CLASS>(XSTR(RTTR_NAME))
 .constructor<>()
 
 #define PARAM_INFO(id, type, name, member, default_val)        \
-.property(#name, &sdv::node::##PARM_NODE_CLASS::member)      \
+.property(#name, &texlab::node::##PARM_NODE_CLASS::member)      \
 (                                                              \
 	rttr::metadata(ee0::UIMetaInfoTag(), ee0::UIMetaInfo(#id)) \
 )

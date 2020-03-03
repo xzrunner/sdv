@@ -1,12 +1,12 @@
 #pragma once
 
-#include "sdv/NodePreview.h"
+#include "texlab/NodePreview.h"
 
 #include <blueprint/Node.h>
 
-#include <sd/Node.h>
+#include <texgraph/Node.h>
 
-namespace sdv
+namespace texlab
 {
 
 class Node : public bp::Node
@@ -22,7 +22,7 @@ public:
     auto& GetName() const { return m_name; }
     void  SetName(const std::string& name) { m_name = name; }
 
-    void UpdatePins(const sd::Node& node);
+    void UpdatePins(const texgraph::Node& node);
 
     auto& GetPreview() const { return m_preview; }
 
@@ -50,7 +50,7 @@ private:
         bool is_input);
 
     static void PortBack2Front(std::vector<PinDesc>& dst,
-        const std::vector<sd::Node::Port>& src);
+        const std::vector<texgraph::Node::Port>& src);
 
 private:
     std::string m_name;

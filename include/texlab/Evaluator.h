@@ -4,8 +4,8 @@
 #include <blueprint/typedef.h>
 
 #include <dag/Graph.h>
-#include <sd/typedef.h>
-#include <sd/NodeVarType.h>
+#include <texgraph/typedef.h>
+#include <texgraph/NodeVarType.h>
 #include <node0/typedef.h>
 
 #include <boost/noncopyable.hpp>
@@ -15,7 +15,7 @@
 
 namespace bp { class Connecting; }
 
-namespace sdv
+namespace texlab
 {
 
 class Evaluator : boost::noncopyable
@@ -39,17 +39,17 @@ public:
 
     auto& GetEval() const { return m_eval; }
 
-    sd::NodePtr QueryBackNode(const bp::Node& front_node) const;
+    texgraph::NodePtr QueryBackNode(const bp::Node& front_node) const;
     n0::SceneNodePtr QuerySceneNode(const bp::Node& front_node) const;
 
 private:
     void Update();
 
 private:
-    dag::Graph<sd::NodeVarType> m_eval;
+    dag::Graph<texgraph::NodeVarType> m_eval;
 
-    std::unordered_map<const bp::Node*, sd::NodePtr> m_front2back;
-    std::unordered_map<const sd::Node*, n0::SceneNodePtr> m_back2node;
+    std::unordered_map<const bp::Node*, texgraph::NodePtr> m_front2back;
+    std::unordered_map<const texgraph::Node*, n0::SceneNodePtr> m_back2node;
 
 }; // Evaluator
 

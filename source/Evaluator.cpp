@@ -1,11 +1,11 @@
-#include "sdv/Evaluator.h"
-#include "sdv/SdAdapter.h"
-#include "sdv/Node.h"
+#include "texlab/Evaluator.h"
+#include "texlab/SdAdapter.h"
+#include "texlab/Node.h"
 
 #include <blueprint/Pin.h>
 #include <blueprint/Connecting.h>
 
-namespace sdv
+namespace texlab
 {
 
 Evaluator::Evaluator(const ee0::SubjectMgrPtr& sub_mgr)
@@ -130,7 +130,7 @@ void Evaluator::OnDisconnecting(const bp::Connecting& conn)
 
 void Evaluator::OnRebuildConnection()
 {
-    std::vector<std::pair<sd::Node::PortAddr, sd::Node::PortAddr>> conns;
+    std::vector<std::pair<texgraph::Node::PortAddr, texgraph::Node::PortAddr>> conns;
     for (auto& itr : m_front2back)
     {
         auto& front = itr.first;
@@ -165,7 +165,7 @@ void Evaluator::OnRebuildConnection()
     Update();
 }
 
-sd::NodePtr Evaluator::QueryBackNode(const bp::Node& front_node) const
+texgraph::NodePtr Evaluator::QueryBackNode(const bp::Node& front_node) const
 {
     auto itr = m_front2back.find(&front_node);
     return itr == m_front2back.end() ? nullptr : itr->second;

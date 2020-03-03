@@ -11,30 +11,30 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\sdv\Blackboard.h" />
-    <ClInclude Include="..\..\..\include\sdv\Evaluator.h" />
-    <ClInclude Include="..\..\..\include\sdv\NodePreview.h" />
-    <ClInclude Include="..\..\..\include\sdv\SdAdapter.h" />
-    <ClInclude Include="..\..\..\include\sdv\SDV.h" />
-    <ClInclude Include="..\..\..\include\sdv\Node.h" />
-    <ClInclude Include="..\..\..\include\sdv\node_def_gen.h" />
-    <ClInclude Include="..\..\..\include\sdv\node_regist_cfg.h" />
-    <ClInclude Include="..\..\..\include\sdv\node_rttr_gen.h" />
-    <ClInclude Include="..\..\..\include\sdv\PinCallback.h" />
-    <ClInclude Include="..\..\..\include\sdv\PinType.h" />
-    <ClInclude Include="..\..\..\include\sdv\PreviewPage.h" />
-    <ClInclude Include="..\..\..\include\sdv\PreviewRender.h" />
-    <ClInclude Include="..\..\..\include\sdv\RegistNodes.h" />
-    <ClInclude Include="..\..\..\include\sdv\WxGraphPage.h" />
-    <ClInclude Include="..\..\..\include\sdv\WxPreviewCanvas.h" />
-    <ClInclude Include="..\..\..\include\sdv\WxToolbarPanel.h" />
+    <ClInclude Include="..\..\..\include\texlab\Blackboard.h" />
+    <ClInclude Include="..\..\..\include\texlab\Evaluator.h" />
+    <ClInclude Include="..\..\..\include\texlab\NodePreview.h" />
+    <ClInclude Include="..\..\..\include\texlab\SdAdapter.h" />
+    <ClInclude Include="..\..\..\include\texlab\TexLab.h" />
+    <ClInclude Include="..\..\..\include\texlab\Node.h" />
+    <ClInclude Include="..\..\..\include\texlab\node_def_gen.h" />
+    <ClInclude Include="..\..\..\include\texlab\node_regist_cfg.h" />
+    <ClInclude Include="..\..\..\include\texlab\node_rttr_gen.h" />
+    <ClInclude Include="..\..\..\include\texlab\PinCallback.h" />
+    <ClInclude Include="..\..\..\include\texlab\PinType.h" />
+    <ClInclude Include="..\..\..\include\texlab\PreviewPage.h" />
+    <ClInclude Include="..\..\..\include\texlab\PreviewRender.h" />
+    <ClInclude Include="..\..\..\include\texlab\RegistNodes.h" />
+    <ClInclude Include="..\..\..\include\texlab\WxGraphPage.h" />
+    <ClInclude Include="..\..\..\include\texlab\WxPreviewCanvas.h" />
+    <ClInclude Include="..\..\..\include\texlab\WxToolbarPanel.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\Blackboard.cpp" />
     <ClCompile Include="..\..\..\source\Evaluator.cpp" />
     <ClCompile Include="..\..\..\source\NodePreview.cpp" />
     <ClCompile Include="..\..\..\source\SdAdapter.cpp" />
-    <ClCompile Include="..\..\..\source\SDV.cpp" />
+    <ClCompile Include="..\..\..\source\TexLab.cpp" />
     <ClCompile Include="..\..\..\source\Node.cpp" />
     <ClCompile Include="..\..\..\source\PinCallback.cpp" />
     <ClCompile Include="..\..\..\source\PreviewPage.cpp" />
@@ -46,9 +46,9 @@
     <ClCompile Include="..\..\..\source\WxToolbarPanel.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>7.sdv</ProjectName>
+    <ProjectName>7.texlab</ProjectName>
     <ProjectGuid>{655701AC-2693-47F4-BCED-C5FC578AD7A0}</ProjectGuid>
-    <RootNamespace>sdv</RootNamespace>
+    <RootNamespace>texlab</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -78,17 +78,17 @@
     <_ProjectFileVersion>15.0.26730.12</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>..\sdv\x86\Debug\</OutDir>
-    <IntDir>..\sdv\x86\Debug\obj\</IntDir>
+    <OutDir>..\texlab\x86\Debug\</OutDir>
+    <IntDir>..\texlab\x86\Debug\obj\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\sdv\x86\Release\</OutDir>
-    <IntDir>..\sdv\x86\Release\obj\</IntDir>
+    <OutDir>..\texlab\x86\Release\</OutDir>
+    <IntDir>..\texlab\x86\Release\obj\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\sm\src\sm;..\..\..\..\guard\include;..\..\..\..\cpputil\include;..\..\..\..\memmgr\include;..\..\..\..\halfedge\include;..\..\..\..\primitive\include;..\..\..\..\tessellation\include;..\..\..\..\geoshape\include;..\..\..\..\polymesh3\include;..\..\..\..\model\include;..\..\..\..\unirender\include;..\..\..\..\painting0\include;..\..\..\..\painting2\include;..\..\..\..\painting3\include;..\..\..\..\sd\include;..\..\..\..\dag\include;..\..\..\..\renderpipeline\include;..\..\..\..\node0\include;..\..\..\..\node2\include;..\..\..\..\node3\include;..\..\..\..\nserializer\include;..\..\..\..\easygui\include;..\..\..\..\moon\include;..\..\..\..\facade\include;..\..\..\..\js\include;..\..\..\..\easyeditor0\include;..\..\..\..\easyeditor2\include;..\..\..\..\easyeditor3\include;..\..\..\..\blueprint\include;..\..\..\..\external\boost\include;..\..\..\..\external\rttr\include;..\..\..\..\external\rapidjson\include;..\..\..\..\external\python27\include\python27;..\..\..\..\external-editor\wx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\sm\src\sm;..\..\..\..\guard\include;..\..\..\..\cpputil\include;..\..\..\..\memmgr\include;..\..\..\..\halfedge\include;..\..\..\..\primitive\include;..\..\..\..\tessellation\include;..\..\..\..\geoshape\include;..\..\..\..\polymesh3\include;..\..\..\..\model\include;..\..\..\..\unirender\include;..\..\..\..\painting0\include;..\..\..\..\painting2\include;..\..\..\..\painting3\include;..\..\..\..\texgraph\include;..\..\..\..\dag\include;..\..\..\..\renderpipeline\include;..\..\..\..\node0\include;..\..\..\..\node2\include;..\..\..\..\node3\include;..\..\..\..\nserializer\include;..\..\..\..\easygui\include;..\..\..\..\moon\include;..\..\..\..\facade\include;..\..\..\..\js\include;..\..\..\..\easyeditor0\include;..\..\..\..\easyeditor2\include;..\..\..\..\easyeditor3\include;..\..\..\..\blueprint\include;..\..\..\..\external\boost\include;..\..\..\..\external\rttr\include;..\..\..\..\external\rapidjson\include;..\..\..\..\external\python27\include\python27;..\..\..\..\external-editor\wx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -103,7 +103,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\sm\src\sm;..\..\..\..\guard\include;..\..\..\..\cpputil\include;..\..\..\..\memmgr\include;..\..\..\..\halfedge\include;..\..\..\..\primitive\include;..\..\..\..\tessellation\include;..\..\..\..\geoshape\include;..\..\..\..\polymesh3\include;..\..\..\..\model\include;..\..\..\..\unirender\include;..\..\..\..\painting0\include;..\..\..\..\painting2\include;..\..\..\..\painting3\include;..\..\..\..\sd\include;..\..\..\..\dag\include;..\..\..\..\renderpipeline\include;..\..\..\..\node0\include;..\..\..\..\node2\include;..\..\..\..\node3\include;..\..\..\..\nserializer\include;..\..\..\..\easygui\include;..\..\..\..\moon\include;..\..\..\..\facade\include;..\..\..\..\js\include;..\..\..\..\easyeditor0\include;..\..\..\..\easyeditor2\include;..\..\..\..\easyeditor3\include;..\..\..\..\blueprint\include;..\..\..\..\external\boost\include;..\..\..\..\external\rttr\include;..\..\..\..\external\rapidjson\include;..\..\..\..\external\python27\include\python27;..\..\..\..\external-editor\wx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\sm\src\sm;..\..\..\..\guard\include;..\..\..\..\cpputil\include;..\..\..\..\memmgr\include;..\..\..\..\halfedge\include;..\..\..\..\primitive\include;..\..\..\..\tessellation\include;..\..\..\..\geoshape\include;..\..\..\..\polymesh3\include;..\..\..\..\model\include;..\..\..\..\unirender\include;..\..\..\..\painting0\include;..\..\..\..\painting2\include;..\..\..\..\painting3\include;..\..\..\..\texgraph\include;..\..\..\..\dag\include;..\..\..\..\renderpipeline\include;..\..\..\..\node0\include;..\..\..\..\node2\include;..\..\..\..\node3\include;..\..\..\..\nserializer\include;..\..\..\..\easygui\include;..\..\..\..\moon\include;..\..\..\..\facade\include;..\..\..\..\js\include;..\..\..\..\easyeditor0\include;..\..\..\..\easyeditor2\include;..\..\..\..\easyeditor3\include;..\..\..\..\blueprint\include;..\..\..\..\external\boost\include;..\..\..\..\external\rttr\include;..\..\..\..\external\rapidjson\include;..\..\..\..\external\python27\include\python27;..\..\..\..\external-editor\wx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>

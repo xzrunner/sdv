@@ -7,10 +7,10 @@
 #include <vector>
 #include <memory>
 
-namespace sdv
+namespace texlab
 {
 
-class SDV
+class TexLab
 {
 public:
     auto& GetAllNodes() { return m_nodes; }
@@ -21,8 +21,8 @@ private:
 private:
     std::vector<bp::NodePtr> m_nodes;
 
-    CU_SINGLETON_DECLARATION(SDV)
+    CU_SINGLETON_DECLARATION(TexLab)
 
-}; // SDV
+}; // TexLab
 
 }

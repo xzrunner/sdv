@@ -1,6 +1,6 @@
 #pragma once
 
-namespace sdv
+namespace texlab
 {
 
 void InitPinCallback();

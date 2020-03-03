@@ -7,7 +7,7 @@
 
 namespace bp { class WxNodeProperty; }
 
-namespace sdv
+namespace texlab
 {
 
 class WxToolbarPanel : public wxPanel, public ee0::Observer

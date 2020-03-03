@@ -6,7 +6,7 @@
 
 namespace ee0 { class WxStagePage; }
 
-namespace sdv
+namespace texlab
 {
 
 class PreviewPage : public ee0::Observer

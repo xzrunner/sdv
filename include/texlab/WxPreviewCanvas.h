@@ -2,7 +2,7 @@
 
 #include <ee3/WxStageCanvas.h>
 
-namespace sdv
+namespace texlab
 {
 
 class WxEditorPanel;

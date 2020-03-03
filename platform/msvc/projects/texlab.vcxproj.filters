@@ -36,55 +36,55 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\sdv\PinType.h">
+    <ClInclude Include="..\..\..\include\texlab\PinType.h">
       <Filter>dataset\pin</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\sdv\PinCallback.h">
+    <ClInclude Include="..\..\..\include\texlab\PinCallback.h">
       <Filter>dataset\pin</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\sdv\Node.h">
+    <ClInclude Include="..\..\..\include\texlab\Node.h">
       <Filter>dataset\node</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\sdv\node_def_gen.h">
+    <ClInclude Include="..\..\..\include\texlab\node_def_gen.h">
       <Filter>tools\rtti</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\sdv\node_regist_cfg.h">
+    <ClInclude Include="..\..\..\include\texlab\node_regist_cfg.h">
       <Filter>tools\rtti</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\sdv\node_rttr_gen.h">
+    <ClInclude Include="..\..\..\include\texlab\node_rttr_gen.h">
       <Filter>tools\rtti</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\sdv\RegistNodes.h">
+    <ClInclude Include="..\..\..\include\texlab\RegistNodes.h">
       <Filter>tools\rtti</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\sdv\WxGraphPage.h">
+    <ClInclude Include="..\..\..\include\texlab\WxGraphPage.h">
       <Filter>view\editor</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\sdv\WxToolbarPanel.h">
+    <ClInclude Include="..\..\..\include\texlab\WxToolbarPanel.h">
       <Filter>view\toolbar</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\sdv\PreviewPage.h">
+    <ClInclude Include="..\..\..\include\texlab\PreviewPage.h">
       <Filter>view\preview</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\sdv\WxPreviewCanvas.h">
+    <ClInclude Include="..\..\..\include\texlab\WxPreviewCanvas.h">
       <Filter>view\preview</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\sdv\Evaluator.h">
+    <ClInclude Include="..\..\..\include\texlab\Evaluator.h">
       <Filter>tools\eval</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\sdv\PreviewRender.h">
+    <ClInclude Include="..\..\..\include\texlab\PreviewRender.h">
       <Filter>view\preview</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\sdv\NodePreview.h">
+    <ClInclude Include="..\..\..\include\texlab\NodePreview.h">
       <Filter>dataset\node</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\sdv\Blackboard.h">
+    <ClInclude Include="..\..\..\include\texlab\Blackboard.h">
       <Filter>tools</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\sdv\SDV.h" />
-    <ClInclude Include="..\..\..\include\sdv\SdAdapter.h">
+    <ClInclude Include="..\..\..\include\texlab\SdAdapter.h">
       <Filter>tools\trans</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\texlab\TexLab.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\PinCallback.cpp">
@@ -123,9 +123,9 @@
     <ClCompile Include="..\..\..\source\Blackboard.cpp">
       <Filter>tools</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\source\SDV.cpp" />
     <ClCompile Include="..\..\..\source\SdAdapter.cpp">
       <Filter>tools\trans</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\source\TexLab.cpp" />
   </ItemGroup>
 </Project>

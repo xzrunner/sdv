@@ -1,6 +1,6 @@
-#include "sdv/Blackboard.h"
+#include "texlab/Blackboard.h"
 
-namespace sdv
+namespace texlab
 {
 
 CU_SINGLETON_DEFINITION(Blackboard);

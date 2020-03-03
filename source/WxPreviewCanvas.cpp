@@ -1,8 +1,8 @@
-#include "sdv/WxPreviewCanvas.h"
-#include "sdv/PreviewPage.h"
-#include "sdv/Node.h"
-#include "sdv/WxGraphPage.h"
-#include "sdv/PreviewRender.h"
+#include "texlab/WxPreviewCanvas.h"
+#include "texlab/PreviewPage.h"
+#include "texlab/Node.h"
+#include "texlab/WxGraphPage.h"
+#include "texlab/PreviewRender.h"
 
 #include <ee0/WxStagePage.h>
 #include <ee0/SubjectMgr.h>
@@ -25,7 +25,7 @@ const uint32_t LIGHT_SELECT_COLOR = 0x88000088;
 
 }
 
-namespace sdv
+namespace texlab
 {
 
 WxPreviewCanvas::WxPreviewCanvas(ee0::WxStagePage* stage, ECS_WORLD_PARAM
