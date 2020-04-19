@@ -9,8 +9,6 @@
 #include <blueprint/NodeHelper.h>
 
 #include <SM_Matrix2D.h>
-#include <unirender/Blackboard.h>
-#include <unirender/RenderContext.h>
 #include <painting0/RenderContext.h>
 #include <painting2/Blackboard.h>
 #include <painting2/RenderContext.h>
@@ -43,44 +41,44 @@ NodePreview::NodePreview()
 
 void NodePreview::Draw(const Evaluator& eval, const bp::Node& node, const n2::RenderParams& rp) const
 {
-    auto back_node = eval.QueryBackNode(node);
-    if (!back_node) {
-        return;
-    }
+    //auto back_node = eval.QueryBackNode(node);
+    //if (!back_node) {
+    //    return;
+    //}
 
-    auto img = back_node->GetImage();
-    if (!img) {
-        return;
-    }
+    //auto img = back_node->GetImage();
+    //if (!img) {
+    //    return;
+    //}
 
-    auto tex = img->GetTexture();
-    if (!tex) {
-        return;
-    }
+    //auto tex = img->GetTexture();
+    //if (!tex) {
+    //    return;
+    //}
 
-    auto mt4 = sm::mat4(bp::NodeHelper::CalcPreviewMat(node, rp.GetMatrix()));
-    const auto scale = mt4.GetScale();
-    const float hw = scale.x * 0.5f;
-    const float hh = scale.y * 0.5f;
-    const auto pos = mt4.GetTranslate();
-    const float vertices[] = {
-        pos.x - hw, pos.y - hh,
-        pos.x + hw, pos.y - hh,
-        pos.x + hw, pos.y + hh,
-        pos.x - hw, pos.y + hh,
-    };
+    //auto mt4 = sm::mat4(bp::NodeHelper::CalcPreviewMat(node, rp.GetMatrix()));
+    //const auto scale = mt4.GetScale();
+    //const float hw = scale.x * 0.5f;
+    //const float hh = scale.y * 0.5f;
+    //const auto pos = mt4.GetTranslate();
+    //const float vertices[] = {
+    //    pos.x - hw, pos.y - hh,
+    //    pos.x + hw, pos.y - hh,
+    //    pos.x + hw, pos.y + hh,
+    //    pos.x - hw, pos.y + hh,
+    //};
 
-    auto& st = node.GetStyle();
-    auto& rt_mgr = pt2::Blackboard::Instance()->GetRenderContext().GetRTMgr();
-    auto tw = st.width / rt_mgr.WIDTH;
-    auto th = st.width / rt_mgr.HEIGHT;
-    const float texcoords[] = {
-        0, 0,
-        tw, 0,
-        tw, th,
-        0, th
-    };
-    pt2::RenderSystem::DrawTexQuad(vertices, texcoords, tex->TexID(), 0xffffffff);
+    //auto& st = node.GetStyle();
+    //auto& rt_mgr = pt2::Blackboard::Instance()->GetRenderContext().GetRTMgr();
+    //auto tw = st.width / rt_mgr.WIDTH;
+    //auto th = st.width / rt_mgr.HEIGHT;
+    //const float texcoords[] = {
+    //    0, 0,
+    //    tw, 0,
+    //    tw, th,
+    //    0, th
+    //};
+    //pt2::RenderSystem::DrawTexQuad(vertices, texcoords, tex->TexID(), 0xffffffff);
 }
 
 }
